@@ -2,7 +2,15 @@
   "service": {
     "DatabaseService": {
       "state": "DefaultState",
-      "history": [        
+      "history": [
+        {
+          "state": "MongoV1",
+          "timestamp": "2023-01-01T00:00:00Z",
+          "metadata": {
+            "jira-issue": "BA-2345",
+            "author": "Jane Doe"
+          }
+        },        
         {
           "state": "DefaultState",
           "timestamp": "2022-11-01T00:00:00Z",
