@@ -1,7 +1,7 @@
 {
   "service": {
     "DatabaseService": {
-      "state": "MongoV1State",
+      "state": "DefaultState",
       "history": [
         {
           "state": "MongoV1State",
