@@ -1,8 +1,16 @@
 {
   "service": {
     "DatabaseService": {
-      "state": "SQLiteState",
+      "state": "PostgresState",
       "history": [
+        {
+          "state": "PostgresState",
+          "timestamp": "2023-03-30T00:00:00Z",
+          "metadata": {
+            "jira-issue": "BA-4598",
+            "author": "Dimitri Zelenko"
+          }
+        },
         {
           "state": "SQLiteState",
           "timestamp": "2023-03-21T00:00:00Z",

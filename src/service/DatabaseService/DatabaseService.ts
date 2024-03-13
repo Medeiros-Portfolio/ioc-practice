@@ -2,6 +2,8 @@ import { container, inject, injectable } from "tsyringe";
 import { getContainerConfig } from "../../util/getContainerConfig";
 import { IDatabaseService } from "../../types";
 import './state'
+import { CreateUserPayload } from "./state/PostgresState";
+import { User } from "../../entities/User";
 
 const BUSINESS = 'DatabaseService';
 
@@ -25,6 +27,10 @@ export class DatabaseService implements IDatabaseService.Context {
 
   disconnect(): string {
     return this.state.disconnect()
+  }
+
+  async create(payload: CreateUserPayload): Promise<User> {
+    return this.state.create(payload)
   }
 }
   
