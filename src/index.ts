@@ -1,6 +1,39 @@
-import { container } from "tsyringe";
-import DatabaseService from "./service/DatabaseService";
+import express from 'express';
+import { container } from 'tsyringe';
+import DatabaseService from './service/DatabaseService';
 
-const service = container.resolve(DatabaseService)
+const DEFAULT_PORT = 3001;
 
-service.connect()
+const port = process.env.PORT || DEFAULT_PORT;
+
+const app = express();
+
+app.route('/connect').get((req, res) => {
+  const service = container.resolve(DatabaseService);
+
+  const response = service.connect();
+  
+  res.send({
+    message: response
+  })
+});
+
+
+app.route('/disconnect').get((req, res) => {
+  const service = container.resolve(DatabaseService);
+
+  const response = service.disconnect();
+
+  res.status(200);
+  res.send({
+    message: response
+  })
+});
+
+app.use((req, res) => {
+  res.status(404).send({
+    message: 'Route not found'
+  });
+});
+
+app.listen(port, () => console.log(`Server running on port ${port}`));

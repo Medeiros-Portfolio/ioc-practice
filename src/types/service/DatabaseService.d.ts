@@ -1,7 +1,7 @@
 export namespace IDatabaseService {
   export interface Context {
-    connect(): void;
-    disconnect(): void;
+    connect(): string;
+    disconnect(): string;
   }
 
   export type State = Context;
