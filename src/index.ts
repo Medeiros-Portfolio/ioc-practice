@@ -30,6 +30,10 @@ app.route('/disconnect').get((req, res) => {
   })
 });
 
+app.route('/healthz').get((req, res) => {
+  res.status(200).send()
+});
+
 app.use((req, res) => {
   res.status(404).send({
     message: 'Route not found'
