@@ -15,6 +15,6 @@ services:
 
 databases:
   - name: ioc-practice-db
-    databaseName: ioc-practice
+    databaseName: ioc_practice
     plan: free    
     ipAllowList: []
