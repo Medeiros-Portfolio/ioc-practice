@@ -6,11 +6,11 @@ import { IDatabaseService } from "../../../types";
     useClass: MongoV1State
 }])
 export class MongoV1State implements IDatabaseService.State {
-  connect(): void {
-    console.log('MongoV1State: connect');
+  connect(): string {
+    return 'MongoV1State: connect';
   }
   
-  disconnect(): void {
-    console.log('MongoV1State: disconnect');
+  disconnect(): string {
+    return 'MongoV1State: disconnect';
   }
 }

@@ -1,10 +1,10 @@
 {
   "service": {
     "DatabaseService": {
-      "state": "DefaultState",
+      "state": "MongoV1State",
       "history": [
         {
-          "state": "MongoV1",
+          "state": "MongoV1State",
           "timestamp": "2023-01-01T00:00:00Z",
           "metadata": {
             "jira-issue": "BA-2345",

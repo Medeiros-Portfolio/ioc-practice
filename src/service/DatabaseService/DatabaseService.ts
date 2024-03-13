@@ -19,12 +19,12 @@ export class DatabaseService implements IDatabaseService.Context {
     private state: IDatabaseService.State
   ) {}
   
-  connect(): void {
-    this.state.connect()
+  connect(): string {
+    return this.state.connect()
   }
 
-  disconnect(): void {
-    this.state.disconnect()
+  disconnect(): string {
+    return this.state.disconnect()
   }
 }
   

@@ -6,11 +6,11 @@ import { IDatabaseService } from "../../../types";
     useClass: DefaultState
 }])
 export class DefaultState implements IDatabaseService.State {
-  connect(): void {
+  connect(): string {
     throw new Error("Method not implemented.");
   }
 
-  disconnect(): void {
+  disconnect(): string {
     throw new Error("Method not implemented.");
   }
 }

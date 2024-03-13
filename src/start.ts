@@ -21,4 +21,4 @@ function populateEnvironment() {
 
 populateEnvironment()
 
-import './src';
+import '.';
