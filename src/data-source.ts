@@ -4,7 +4,7 @@ import { User } from "./entities/User";
 const AppDataSource = new DataSource({
   type: "postgres",
   host: process.env.DATABASE_URL,
-  database: "ioc-practice",
+  database: "ioc_practice",
   entities: [User],
   synchronize: true,
   logging: false,
