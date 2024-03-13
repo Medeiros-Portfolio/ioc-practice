@@ -1,0 +1,17 @@
+{
+  "service": {
+    "DatabaseService": {
+      "state": "DefaultState",
+      "history": [        
+        {
+          "state": "DefaultState",
+          "timestamp": "2022-11-01T00:00:00Z",
+          "metadata": {
+            "jira-issue": "BA-1234",
+            "author": "John Doe"
+          }
+        }
+      ]
+    }
+  }
+}
